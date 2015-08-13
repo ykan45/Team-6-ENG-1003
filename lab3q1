@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Eng1003 Workshop Code Week 03</title>
+	<style>
+		#outputArea{
+			padding: .25em;
+			border: solid black 2px;
+			margin: 3em;
+			
+			height: 20em;
+			width: 20em;
+			
+			overflow-y: scroll;
+			
+			font-family: arial "sans serif";
+			font-size: 1em;
+			color: rgb(50, 50, 250);
+			
+			background-color: rgb(225,225,225) ;
+		}
+	</style>
+
+	</head>
+	
+	<body>
+	<!-- 	-->		
+		<div id="outputArea"></div>
+
+
+		<script>
+			//PASTE YOUR CODE BELOW THIS LINE
+            var target = document.getElementById("outputArea");
+            var outString = "";
+            
+            var radius, area, circumference, ratio;
+            radius = 1;
+            area = Math.PI * Math.pow(radius, 2);
+            circumference = 2 * Math.PI * radius;
+            ratio = area / circumference;
+            while(ratio<30){
+                outString += radius + ". " + ratio + "<br/>";
+                
+                radius++;
+                area = Math.PI * Math.pow(radius, 2);
+                circumference = 2 * Math.PI * radius;
+                ratio = area / circumference;
+            }
+            
+            target.innerHTML = outString;
+		</script>
+	</body>
+</html>
